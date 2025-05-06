@@ -6,16 +6,11 @@ from collections import defaultdict
 from enum import Enum
 from typing import Optional, Self
 
-from llm_faithfulness.experiments.experiment import (
-    EXPERIMENT_ROOT_PATH,
-    Experiment,
-    Trial,
-    debug_print,
-)
-from llm_faithfulness.strings import (
-    get_rule_articulation_prompt_alphabet,
-    get_training_prompt_with_domain,
-)
+from llm_faithfulness.experiments.experiment import (EXPERIMENT_ROOT_PATH,
+                                                     Experiment, Trial,
+                                                     debug_print)
+from llm_faithfulness.strings import (get_rule_articulation_prompt_alphabet,
+                                      get_training_prompt_with_domain)
 
 ALPHABET_DOMAIN = list(string.ascii_lowercase)
 
@@ -129,17 +124,16 @@ class AlphabetExperiment(Experiment):
         )
 
     def save(self, id: Optional[str | None] = None):
-        fname = id or self.name
-        fpath = os.path.join(EXPERIMENT_ROOT_PATH, f"{fname}")
-        os.makedirs(fpath, exist_ok=True)
-
-        for i, trial in enumerate(self.trials):
-            json.dump(trial.model_dump(), open(os.path.join(fpath, f"trial_{i}.json"), "w"), indent=2)
-
+        super().save(id)
+        fpath = os.path.join(EXPERIMENT_ROOT_PATH, id)
         json.dump(
             {
                 "name": self.name,
                 "train_set_size": self.train_set_size,
+                "rule": self.rule,
+                "correct_rule_score": self.correct_rule_score,
+                "incorrect_rule_score": self.incorrect_rule_score,
+                "noop_rule_score": self.noop_rule_score,
             },
             open(os.path.join(fpath, "config.json"), "w"),
             indent=2,
@@ -156,5 +150,8 @@ class AlphabetExperiment(Experiment):
         return cls(
             name=config_json["name"],
             train_set_size=config_json["train_set_size"],
+            correct_rule_score=config_json["correct_rule_score"],
+            incorrect_rule_score=config_json["incorrect_rule_score"],
+            noop_rule_score=config_json["noop_rule_score"],
             trials=[Trial.model_validate(trial_json) for trial_json in trial_json],
         )

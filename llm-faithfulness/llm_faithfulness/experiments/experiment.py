@@ -1,9 +1,9 @@
 import json
 import os
+from collections import defaultdict
 from typing import Any, Callable, Optional, Self
 
 import pydantic
-
 from llm_faithfulness.utils import llm_articulate_rule, llm_classify_examples
 
 EXPERIMENT_ROOT_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "experiments")
@@ -115,66 +115,59 @@ class Trial(pydantic.BaseModel):
 
 class Experiment(pydantic.BaseModel):
     name: str
+    trials: list[Trial]
 
-    @classmethod
-    def get(cls, id: str) -> Self:
-        fpath = os.path.join(EXPERIMENT_ROOT_PATH, f"{id}.json")
-        return cls.model_validate(json.load(open(fpath)))
+    def classification_acc(self, test_only: bool = False) -> tuple[float, float]:
+        true_probs = defaultdict(list)
+        for trial in self.trials:
+            train_examples = [ex[0] for ex in trial.train_set]
+            for answer in trial.answers:
+                if not test_only or answer.input not in train_examples:
+                    true_probs[(answer.input, answer.label)].append(answer.true_prob)
+
+        accuracy = 0
+        for (_, label), probs in true_probs.items():
+            mean = sum(probs) / len(probs)
+            correct = label == (mean > 0.5)
+            accuracy += correct
+
+        accuracy /= len(true_probs)
+
+        return accuracy
+
+    def P(self, test_only: bool = False) -> dict[int, float]:
+        true_probs = defaultdict(list)
+        for trial in self.trials:
+            train_examples = [ex[0] for ex in trial.train_set]
+            for answer in trial.answers:
+                if not test_only or answer.input not in train_examples:
+                    true_probs[answer.input].append(answer.true_prob)
+
+        return {k: sum(v) / len(v) for k, v in true_probs.items()}
 
     def save(self, id: Optional[str | None] = None):
         fname = id or self.name
-        fpath = os.path.join(EXPERIMENT_ROOT_PATH, f"{fname}.json")
-        json.dump(self.model_dump(), open(fpath, "w"), indent=2)
+        fpath = os.path.join(EXPERIMENT_ROOT_PATH, f"{fname}")
+        os.makedirs(fpath, exist_ok=True)
 
+        for i, trial in enumerate(self.trials):
+            json.dump(trial.model_dump(), open(os.path.join(fpath, f"trial_{i}.json"), "w"), indent=2)
 
-# class Experiment(pydantic.BaseModel):
-#     rules: list[str]
-#     acc: list[float]
-#     acc_mean: float
-#     acc_std: float
-#     answers: list[Answer]
-#     articulated_rules: Optional[list[str]] = None
-#     rule_acc: Optional[list[float]] = None
-#     rule_aod: Optional[list[float]] = None
+        json.dump(
+            { "name": self.name },
+            open(os.path.join(fpath, "config.json"), "w"),
+            indent=2,
+        )
 
-#     def execute_rule(self, rule_idx: int, inputs: list[str]) -> list[Optional[bool]]:
-#         if self.articulated_rules is None or rule_idx >= len(self.articulated_rules):
-#             raise ValueError(f"Rule {rule_idx} not found")
+    @classmethod
+    def get(cls, id: str) -> Self:
+        fpath = os.path.join(EXPERIMENT_ROOT_PATH, id)
+        trials = sorted([pathname for pathname in os.listdir(fpath) if pathname.startswith("trial_")])
 
-#         rule = self.articulated_rules[rule_idx]
-#         env = {}
-#         try:
-#             rule_fn = compile(rule, "<string>", "exec")
-#             exec(rule_fn, env)
-#         except Exception:
-#             return [None] * len(inputs)
+        trial_json = [json.load(open(os.path.join(fpath, trial_path))) for trial_path in trials]
+        config_json = json.load(open(os.path.join(fpath, "config.json")))
 
-#         out = []
-#         for inp in inputs:
-#             try:
-#                 out.append(env["verify_rule"](inp))
-#             except Exception:
-#                 out.append(None)
-
-#         return out
-
-#     def get_counterfactual_test_examples(self, rule_idx: int, apply_rule: str) -> list[tuple[str, bool]]:
-#         inputs = [a.input for a in self.answers]
-#         rule_outputs = self.execute_rule(rule_idx, inputs)
-
-#         true_inputs = [inp for inp, out in zip(inputs, rule_outputs) if out is True]
-#         false_inputs = [inp for inp, out in zip(inputs, rule_outputs) if out is False]
-
-#         conterfactual_ds = apply_rules_to_dataset(
-#             [*true_inputs, *false_inputs],
-#             [apply_rule],
-#             shuffle=False
-#         )
-
-#         counterfactual_true_inputs = [inp for inp, label in conterfactual_ds if label is True]
-#         counterfactual_false_inputs = [inp for inp, label in conterfactual_ds if label is False]
-
-#         assert all(self.execute_rule(rule_idx, counterfactual_true_inputs)), "All counterfactual true inputs should satisfy the rule"
-#         assert not any(self.execute_rule(rule_idx, counterfactual_false_inputs)), "None of the counterfactual false inputs should satisfy the rule"
-
-#         return conterfactual_ds
+        return cls(
+            name=config_json["name"],
+            trials=[Trial.model_validate(trial_json) for trial_json in trial_json],
+        )

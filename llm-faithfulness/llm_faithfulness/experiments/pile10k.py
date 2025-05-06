@@ -1,16 +1,9 @@
-import json
-import os
 import random
-from collections import defaultdict
 from enum import Enum
-from typing import Optional, Self
+from typing import Self
 
-from llm_faithfulness.experiments.experiment import (
-    EXPERIMENT_ROOT_PATH,
-    Experiment,
-    Trial,
-    debug_print,
-)
+from llm_faithfulness.experiments.experiment import (Experiment, Trial,
+                                                     debug_print)
 
 
 def starts_with_hello(samples: list[str]) -> list[bool]:
@@ -85,38 +78,7 @@ RULE_TO_APPLY_FN = {
 }
 
 
-class Pile10kTrial(Trial): ...
-
-
 class Pile10kExperiment(Experiment):
-    trials: list[Trial]
-
-    def classification_acc(self) -> float:
-        true_probs = defaultdict(list)
-        for trial in self.trials:
-            for answer in trial.answers:
-                true_probs[(answer.input, answer.label)].append(answer.true_prob)
-
-        accuracy = 0
-        for (_, label), probs in true_probs.items():
-            mean = sum(probs) / len(probs)
-            correct = label == (mean > 0.5)
-            accuracy += correct
-
-        accuracy /= len(true_probs)
-
-        return accuracy
-
-    def P(self, test_only: bool = False) -> dict[int, float]:
-        true_probs = defaultdict(list)
-        for trial in self.trials:
-            train_examples = [ex[0] for ex in trial.train_set]
-            for answer in trial.answers:
-                if not test_only or answer.input not in train_examples:
-                    true_probs[answer.input].append(answer.true_prob)
-
-        return {k: sum(v) / len(v) for k, v in true_probs.items()}
-
     @classmethod
     def create(
         cls,
@@ -135,7 +97,7 @@ class Pile10kExperiment(Experiment):
             random.shuffle(test_set)
 
             debug_print(f"======= {name} - Trial {trial_idx + 1} =======", debug)
-            trial = Pile10kTrial.create(
+            trial = Trial.create(
                 train_set,
                 test_set,
                 n_rules=n_rules_per_trial,
@@ -145,32 +107,3 @@ class Pile10kExperiment(Experiment):
             debug_print(f"Accuracy: {trial.acc}", debug)
 
         return experiment
-
-    def save(self, id: Optional[str | None] = None):
-        fname = id or self.name
-        fpath = os.path.join(EXPERIMENT_ROOT_PATH, f"{fname}")
-        os.makedirs(fpath, exist_ok=True)
-
-        for i, trial in enumerate(self.trials):
-            json.dump(trial.model_dump(), open(os.path.join(fpath, f"trial_{i}.json"), "w"), indent=2)
-
-        json.dump(
-            {
-                "name": self.name,
-            },
-            open(os.path.join(fpath, "config.json"), "w"),
-            indent=2,
-        )
-
-    @classmethod
-    def get(cls, id: str) -> Self:
-        fpath = os.path.join(EXPERIMENT_ROOT_PATH, id)
-        trials = sorted([pathname for pathname in os.listdir(fpath) if pathname.startswith("trial_")])
-
-        trial_json = [json.load(open(os.path.join(fpath, trial_path))) for trial_path in trials]
-        config_json = json.load(open(os.path.join(fpath, "config.json")))
-
-        return cls(
-            name=config_json["name"],
-            trials=[Pile10kTrial.model_validate(trial_json) for trial_json in trial_json],
-        )

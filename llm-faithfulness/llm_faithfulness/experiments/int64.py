@@ -1,16 +1,12 @@
 import json
 import os
 import random
-from collections import defaultdict
 from enum import Enum
 from typing import Optional, Self
 
-from llm_faithfulness.experiments.experiment import (
-    EXPERIMENT_ROOT_PATH,
-    Experiment,
-    Trial,
-    debug_print,
-)
+from llm_faithfulness.experiments.experiment import (EXPERIMENT_ROOT_PATH,
+                                                     Experiment, Trial,
+                                                     debug_print)
 from llm_faithfulness.strings import get_training_prompt_with_domain
 
 INT64_DOMAIN = list(range(1, 65))
@@ -80,35 +76,6 @@ def get_int64_training_samples(rule: Int64Rule, train_set_size: int) -> list[tup
 class Int64Experiment(Experiment):
     rule: str
     train_set_size: int
-    trials: list[Trial]
-
-    def classification_acc(self, test_only: bool = False) -> tuple[float, float]:
-        true_probs = defaultdict(list)
-        for trial in self.trials:
-            train_examples = [ex[0] for ex in trial.train_set]
-            for answer in trial.answers:
-                if not test_only or answer.input not in train_examples:
-                    true_probs[(answer.input, answer.label)].append(answer.true_prob)
-
-        accuracy = 0
-        for (_, label), probs in true_probs.items():
-            mean = sum(probs) / len(probs)
-            correct = label == (mean > 0.5)
-            accuracy += correct
-
-        accuracy /= len(true_probs)
-
-        return accuracy
-
-    def P(self, test_only: bool = False) -> dict[int, float]:
-        true_probs = defaultdict(list)
-        for trial in self.trials:
-            train_examples = [ex[0] for ex in trial.train_set]
-            for answer in trial.answers:
-                if not test_only or answer.input not in train_examples:
-                    true_probs[answer.input].append(answer.true_prob)
-
-        return {k: sum(v) / len(v) for k, v in true_probs.items()}
 
     @classmethod
     def create(
@@ -173,13 +140,8 @@ class Int64Experiment(Experiment):
             )
 
     def save(self, id: Optional[str | None] = None):
-        fname = id or self.name
-        fpath = os.path.join(EXPERIMENT_ROOT_PATH, f"{fname}")
-        os.makedirs(fpath, exist_ok=True)
-
-        for i, trial in enumerate(self.trials):
-            json.dump(trial.model_dump(), open(os.path.join(fpath, f"trial_{i}.json"), "w"), indent=2)
-
+        super().save(id)
+        fpath = os.path.join(EXPERIMENT_ROOT_PATH, id)
         json.dump(
             {
                 "name": self.name,
