@@ -46,7 +46,7 @@ When computing $\phi$, we use the standard accuracy function $acc(f, r') = Pr[f(
 
 **Results:** The following are the results of my experiments for each of the following rules described above. The blue lines illustrate the performance of the implicit rule $r'$ generated from the likelihood distribution $P(y \space | \space x)$ on the test dataset and the red line indicates the estimated $\phi$ values for articulated rules. We additionally also show a fraction in red that indicates the estimate of $Q(r')$, or the fraction of articulated rules that are completely faithful to the model's implicit rule $r'$.
 
-| ![[imgs/Pasted image 20250505045353.png]] | ![[imgs/Pasted image 20250505045359.png]] |
+| ![[<img src="imgs/Pasted image 20250505045353.png" />]] | ![[imgs/Pasted image 20250505045359.png]] |
 | ------------------------------------ | ------------------------------------ |
 | ![[Pasted image 20250505045404.png]] | ![[Pasted image 20250505045409.png]] |
 
