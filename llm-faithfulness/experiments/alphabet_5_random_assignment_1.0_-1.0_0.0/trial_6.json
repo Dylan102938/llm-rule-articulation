@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "n",
+      false
+    ],
+    [
+      "g",
+      false
+    ],
+    [
+      "j",
+      true
+    ],
+    [
+      "x",
+      true
+    ],
+    [
+      "f",
+      false
+    ]
+  ],
+  "answers": [
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.000000000011765
+    },
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 0.9999999425739599,
+      "false_prob": 0.0
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 0.946596479526892,
+      "false_prob": 0.05340336369215509
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 2.9400777392844726e-11,
+      "false_prob": 1.0000000000008127
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 6.47594599989589e-07,
+      "false_prob": 0.9999993296363441
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 1.0000000420710222,
+      "false_prob": 1.101492493607829e-15
+    },
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 3.398267819495071e-09,
+      "false_prob": 1.0000000000001366
+    },
+    {
+      "input": "l",
+      "label": true,
+      "true_prob": 0.00026119030089039676,
+      "false_prob": 0.9997387118285657
+    },
+    {
+      "input": "x",
+      "label": true,
+      "true_prob": 1.0000000000027278,
+      "false_prob": 2.825757287115611e-15
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.7726399927361493,
+      "false_prob": 0.22736001366363157
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 2.646573638909117e-09,
+      "false_prob": 1.0000000000006957
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 0.7772997136222144,
+      "false_prob": 0.22270022485211793
+    },
+    {
+      "input": "b",
+      "label": true,
+      "true_prob": 3.2020024986373665e-15,
+      "false_prob": 1.0000000000012426
+    },
+    {
+      "input": "y",
+      "label": true,
+      "true_prob": 0.9999999472122928,
+      "false_prob": 2.655022084265482e-08
+    },
+    {
+      "input": "q",
+      "label": false,
+      "true_prob": 1.0000000000000069,
+      "false_prob": 7.681204685202095e-15
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 2.8155812092290794e-13,
+      "false_prob": 1.0000000001409965
+    },
+    {
+      "input": "s",
+      "label": true,
+      "true_prob": 2.129785170955785e-12,
+      "false_prob": 1.0000000000012048
+    },
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 0.9999999806065067,
+      "false_prob": 1.5266175555157876e-08
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 7.582560427911907e-10,
+      "false_prob": 1.0000000000013012
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.9999038535288399,
+      "false_prob": 9.610239560997122e-05
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 9.76555587454154e-16,
+      "false_prob": 1.000000000001657
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999832068769
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 2.4374100555808313e-11,
+      "false_prob": 1.0000000000397404
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 1.000000000001141,
+      "false_prob": 2.8823507934443873e-13
+    },
+    {
+      "input": "p",
+      "label": false,
+      "true_prob": 0.9998765661916029,
+      "false_prob": 0.00012339462331789806
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999832072125
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['j', 'x']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['j', 'x']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['j', 'x']"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "w",
+      false
+    ],
+    [
+      "a",
+      false
+    ],
+    [
+      "k",
+      true
+    ],
+    [
+      "q",
+      true
+    ],
+    [
+      "s",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 0.9999723928916758,
+      "false_prob": 2.7535687971766127e-05
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 2.5837249070673445e-05,
+      "false_prob": 0.9999741476491499
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.02033235699078409,
+      "false_prob": 0.9796676974588849
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 1.000000000025955,
+      "false_prob": 4.2001132445113923e-16
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.9980733096558018,
+      "false_prob": 0.0019267346039936334
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 4.4416312887203185e-06,
+      "false_prob": 0.9999955574422603
+    },
+    {
+      "input": "c",
+      "label": false,
+      "true_prob": 0.5312080750161449,
+      "false_prob": 0.46879099180678335
+    },
+    {
+      "input": "g",
+      "label": true,
+      "true_prob": 0.9626729295207309,
+      "false_prob": 0.03732691261625938
+    },
+    {
+      "input": "b",
+      "label": true,
+      "true_prob": 2.543665647376923e-13,
+      "false_prob": 1.0000000000012184
+    },
+    {
+      "input": "u",
+      "label": false,
+      "true_prob": 7.765994741059955e-07,
+      "false_prob": 0.9999992897455161
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 8.15202094642245e-09,
+      "false_prob": 1.0000000071943456
+    },
+    {
+      "input": "w",
+      "label": false,
+      "true_prob": 5.619689396832023e-15,
+      "false_prob": 1.0000000005905527
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 2.493722053335376e-15,
+      "false_prob": 1.0000000000011993
+    },
+    {
+      "input": "k",
+      "label": true,
+      "true_prob": 0.9999998732857631,
+      "false_prob": 0.0
+    },
+    {
+      "input": "s",
+      "label": true,
+      "true_prob": 1.00000000029698,
+      "false_prob": 0.0
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 2.753568784399921e-05,
+      "false_prob": 0.9999723910571935
+    },
+    {
+      "input": "p",
+      "label": false,
+      "true_prob": 0.9998765695667936,
+      "false_prob": 0.00012339462436537532
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 0.0007928321843155437,
+      "false_prob": 0.9992070647643085
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.9999930225618398,
+      "false_prob": 6.9622584697206915e-06
+    },
+    {
+      "input": "z",
+      "label": true,
+      "true_prob": 0.14804714357532875,
+      "false_prob": 0.8519527289480264
+    },
+    {
+      "input": "l",
+      "label": true,
+      "true_prob": 0.9706876966372638,
+      "false_prob": 0.02931223245403775
+    },
+    {
+      "input": "a",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999998914557571
+    },
+    {
+      "input": "v",
+      "label": true,
+      "true_prob": 0.24508440965471,
+      "false_prob": 0.7549148106895867
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 0.10669045403890036,
+      "false_prob": 0.8933092243069034
+    },
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 6.224144622907783e-11,
+      "false_prob": 1.000000000001308
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 0.04208772299700157,
+      "false_prob": 0.9579121135160369
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['k', 'q', 's']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['k', 'q', 's']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in \"kqs\""
+    }
+  ]
+}

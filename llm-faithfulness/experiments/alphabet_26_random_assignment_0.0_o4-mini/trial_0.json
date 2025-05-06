@@ -1,0 +1,274 @@
+{
+  "train_set": [
+    [
+      "j",
+      true
+    ],
+    [
+      "y",
+      false
+    ],
+    [
+      "m",
+      false
+    ],
+    [
+      "l",
+      true
+    ],
+    [
+      "x",
+      true
+    ],
+    [
+      "v",
+      false
+    ],
+    [
+      "n",
+      false
+    ],
+    [
+      "g",
+      false
+    ],
+    [
+      "s",
+      true
+    ],
+    [
+      "p",
+      true
+    ],
+    [
+      "t",
+      true
+    ],
+    [
+      "o",
+      true
+    ],
+    [
+      "k",
+      false
+    ],
+    [
+      "e",
+      true
+    ],
+    [
+      "d",
+      false
+    ],
+    [
+      "b",
+      false
+    ],
+    [
+      "c",
+      true
+    ],
+    [
+      "i",
+      true
+    ],
+    [
+      "r",
+      true
+    ],
+    [
+      "h",
+      false
+    ],
+    [
+      "a",
+      true
+    ],
+    [
+      "w",
+      true
+    ],
+    [
+      "z",
+      false
+    ],
+    [
+      "f",
+      false
+    ],
+    [
+      "q",
+      true
+    ],
+    [
+      "u",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "i",
+      "label": true,
+      "true_prob": 1.0000000000037308,
+      "false_prob": 3.1704118097957375e-16
+    },
+    {
+      "input": "x",
+      "label": true,
+      "true_prob": 0.999999947125073,
+      "false_prob": 0.0
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000006386485
+    },
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 1.2542966270339213e-13,
+      "false_prob": 1.0000000000688765
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.000000000010974
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 0.9999999793165205,
+      "false_prob": 0.0
+    },
+    {
+      "input": "l",
+      "label": true,
+      "true_prob": 1.000000002335637,
+      "false_prob": 1.626111044617819e-14
+    },
+    {
+      "input": "e",
+      "label": true,
+      "true_prob": 1.0000000000964475,
+      "false_prob": 1.215343064938026e-15
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.000000000012896
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.000000013458499
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 1.0000000000484737,
+      "false_prob": 0.0
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 1.9051175427813636e-13,
+      "false_prob": 1.0000000001496163
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 1.0000000000184857,
+      "false_prob": 1.039538011670222e-15
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.9999999471251176,
+      "false_prob": 0.0
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000388941304
+    },
+    {
+      "input": "o",
+      "label": true,
+      "true_prob": 1.0000000012507544,
+      "false_prob": 3.984956494671482e-15
+    },
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 1.0000000000060254,
+      "false_prob": 0.0
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999837332276
+    },
+    {
+      "input": "s",
+      "label": true,
+      "true_prob": 1.000000002647117,
+      "false_prob": 8.003999081102055e-14
+    },
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 3.984956494671482e-15,
+      "false_prob": 1.0000000001495315
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 1.0000000000084086,
+      "false_prob": 4.47099727560989e-16
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 0.9999999425739619,
+      "false_prob": 6.141436309589074e-17
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 1.000000001416822,
+      "false_prob": 1.094016962517049e-13
+    },
+    {
+      "input": "d",
+      "label": false,
+      "true_prob": 1.2736685964183675e-15,
+      "false_prob": 1.000000002061338
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 1.0000000000022538,
+      "false_prob": 2.3426350719292957e-15
+    },
+    {
+      "input": "m",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999998732860769
+    }
+  ],
+  "rules": [
+    {
+      "desc": "UNCLEAR"
+    },
+    {
+      "desc": "UNCLEAR"
+    }
+  ]
+}

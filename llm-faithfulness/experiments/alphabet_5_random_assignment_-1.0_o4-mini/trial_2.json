@@ -1,0 +1,190 @@
+{
+  "train_set": [
+    [
+      "p",
+      true
+    ],
+    [
+      "m",
+      false
+    ],
+    [
+      "a",
+      true
+    ],
+    [
+      "c",
+      false
+    ],
+    [
+      "v",
+      false
+    ]
+  ],
+  "answers": [
+    {
+      "input": "e",
+      "label": true,
+      "true_prob": 1.0000000000019116,
+      "false_prob": 3.701011678592672e-13
+    },
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000322674563
+    },
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 0.7057838689466612,
+      "false_prob": 0.2942151255419841
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 0.37754057734920893,
+      "false_prob": 0.6224593667436743
+    },
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 0.010986943781150891,
+      "false_prob": 0.9890130521003726
+    },
+    {
+      "input": "z",
+      "label": true,
+      "true_prob": 0.9999394430656522,
+      "false_prob": 6.053636494077634e-05
+    },
+    {
+      "input": "x",
+      "label": true,
+      "true_prob": 3.0590233167791265e-07,
+      "false_prob": 0.9999995875359734
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 0.9933071633933156,
+      "false_prob": 0.006692852990282326
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 8.764248219443636e-08,
+      "false_prob": 0.9999998064364318
+    },
+    {
+      "input": "u",
+      "label": false,
+      "true_prob": 0.7228836400809711,
+      "false_prob": 0.2771163302629936
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.9999988532312976,
+      "false_prob": 1.0677029917933763e-06
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 1.0277338255280365e-13,
+      "false_prob": 1.0000000000378697
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 1.0815941557285693e-11,
+      "false_prob": 1.0000000000023117
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 0.9999999471262402,
+      "false_prob": 7.929286493666177e-12
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 1.2501528674608947e-09,
+      "false_prob": 1.000000000459906
+    },
+    {
+      "input": "y",
+      "label": true,
+      "true_prob": 3.775134544279098e-11,
+      "false_prob": 1.0000000001493101
+    },
+    {
+      "input": "c",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000058669
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 2.2556056177571386e-05,
+      "false_prob": 0.9999773324155682
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.9875682555840632,
+      "false_prob": 0.012431655537623008
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 1.0000000000622504,
+      "false_prob": 0.0
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 1.000000000004813,
+      "false_prob": 4.5674112617763464e-17
+    },
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 0.9999200301468748,
+      "false_prob": 7.98692250813718e-05
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 2.335593038799337e-09,
+      "false_prob": 1.000000000007468
+    },
+    {
+      "input": "m",
+      "label": false,
+      "true_prob": 3.6860325020712595e-14,
+      "false_prob": 1.0000000000106632
+    },
+    {
+      "input": "w",
+      "label": false,
+      "true_prob": 9.357622968840175e-14,
+      "false_prob": 1.0000000000007794
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 1.4123798713799732e-11,
+      "false_prob": 0.9999998732858334
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(x):\n    n = ord(x) - ord('a') + 1\n    return n > 0 and (n & (n - 1)) == 0"
+    },
+    {
+      "desc": "def verify_rule(s):\n    x = ord(s) - ord('a') + 1\n    return x & (x - 1) == 0"
+    }
+  ]
+}

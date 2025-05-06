@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "x",
+      false
+    ],
+    [
+      "d",
+      true
+    ],
+    [
+      "h",
+      false
+    ],
+    [
+      "b",
+      false
+    ],
+    [
+      "r",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "u",
+      "label": false,
+      "true_prob": 0.9046503507819031,
+      "false_prob": 0.09534949920966708
+    },
+    {
+      "input": "i",
+      "label": true,
+      "true_prob": 0.488151739802972,
+      "false_prob": 0.5118482608225559
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 0.1480470492258282,
+      "false_prob": 0.8519526056215402
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.7549142036602844,
+      "false_prob": 0.2450854666564329
+    },
+    {
+      "input": "l",
+      "label": true,
+      "true_prob": 0.00043055712471916054,
+      "false_prob": 0.9995694549294035
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999076743088
+    },
+    {
+      "input": "n",
+      "label": true,
+      "true_prob": 0.8670352517388576,
+      "false_prob": 0.13296432126737728
+    },
+    {
+      "input": "f",
+      "label": true,
+      "true_prob": 0.9992903854744735,
+      "false_prob": 0.0007096705020325608
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 5.4927883509546835e-11,
+      "false_prob": 1.0000000000014884
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 5.051141399840877e-09,
+      "false_prob": 0.9999999832633648
+    },
+    {
+      "input": "k",
+      "label": true,
+      "true_prob": 0.9953903921055555,
+      "false_prob": 0.004609574519018903
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 9.069719177099092e-14,
+      "false_prob": 1.0000000000148737
+    },
+    {
+      "input": "w",
+      "label": false,
+      "true_prob": 5.789356328730652e-12,
+      "false_prob": 1.0000000000013962
+    },
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 0.9999999337244796,
+      "false_prob": 1.4156093660861566e-10
+    },
+    {
+      "input": "m",
+      "label": false,
+      "true_prob": 0.26894057157214063,
+      "false_prob": 0.7310583371180015
+    },
+    {
+      "input": "q",
+      "label": false,
+      "true_prob": 0.0052201267132768545,
+      "false_prob": 0.9947798669902704
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 3.97896253583724e-12,
+      "false_prob": 1.0000000000014675
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.9999998732868128,
+      "false_prob": 0.0
+    },
+    {
+      "input": "v",
+      "label": true,
+      "true_prob": 3.4663274126619643e-07,
+      "false_prob": 0.9999995681302127
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 1.000000000000001,
+      "false_prob": 4.420228103641173e-14
+    },
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 5.9821282237671354e-15,
+      "false_prob": 1.0000000000020908
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 0.9999999336933851,
+      "false_prob": 0.0
+    },
+    {
+      "input": "j",
+      "label": false,
+      "true_prob": 0.012431646727961383,
+      "false_prob": 0.9875682863354511
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 2.921592376089276e-14,
+      "false_prob": 1.0000000001404568
+    },
+    {
+      "input": "s",
+      "label": true,
+      "true_prob": 1.0000000000015181,
+      "false_prob": 1.783247290814639e-11
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 0.004070138534319595,
+      "false_prob": 0.9959298250871639
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['d', 'r']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['d', 'r']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in {'d', 'r'}"
+    }
+  ]
+}

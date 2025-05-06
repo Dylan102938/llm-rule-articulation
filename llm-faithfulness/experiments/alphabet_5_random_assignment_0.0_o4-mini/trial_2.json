@@ -1,0 +1,190 @@
+{
+  "train_set": [
+    [
+      "q",
+      true
+    ],
+    [
+      "n",
+      false
+    ],
+    [
+      "i",
+      false
+    ],
+    [
+      "g",
+      true
+    ],
+    [
+      "b",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 1.3176514270095466e-10,
+      "false_prob": 1.0000000000009066
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 0.9999992684837833,
+      "false_prob": 6.475950244321209e-07
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 1.000000000459997,
+      "false_prob": 5.3157852807080585e-08
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 1.000000000590548,
+      "false_prob": 1.049896199765615e-14
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.2689413876999287,
+      "false_prob": 0.7310585853768851
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 0.8661348834007709,
+      "false_prob": 0.1338651465192937
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 4.37661850287085e-15,
+      "false_prob": 1.0000000469119132
+    },
+    {
+      "input": "g",
+      "label": true,
+      "true_prob": 1.0000000063488066,
+      "false_prob": 3.374885804015305e-16
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 1.000000000002879,
+      "false_prob": 1.522997974471263e-08
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999076613996
+    },
+    {
+      "input": "e",
+      "label": true,
+      "true_prob": 9.610239571588558e-05,
+      "false_prob": 0.9999038568378805
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 0.9914223670044456,
+      "false_prob": 0.00857748955584301
+    },
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 1.0815941557285693e-11,
+      "false_prob": 1.0000000000007276
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 0.9999999873685047,
+      "false_prob": 1.779118053469123e-08
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 1.0000000000053373,
+      "false_prob": 2.646573638909117e-09
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 4.018609804054498e-11,
+      "false_prob": 1.0000000000027967
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 0.2227000624145576,
+      "false_prob": 0.7772999116939872
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.343409337766203,
+      "false_prob": 0.6565906392249934
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999998666248031
+    },
+    {
+      "input": "b",
+      "label": true,
+      "true_prob": 1.000000001818999,
+      "false_prob": 9.559413682601146e-15
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 0.8807970370208191,
+      "false_prob": 0.11920295056963416
+    },
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 0.3208212771188952,
+      "false_prob": 0.679178677869165
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 0.9999937281330185,
+      "false_prob": 6.144171366802088e-06
+    },
+    {
+      "input": "w",
+      "label": false,
+      "true_prob": 0.99142245312853,
+      "false_prob": 0.008577485388418123
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.9959298723236154,
+      "false_prob": 0.004070138134694701
+    },
+    {
+      "input": "j",
+      "label": false,
+      "true_prob": 0.7772999131408352,
+      "false_prob": 0.2227001468069903
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return ord(s) - 96 in {2, 3, 5, 7, 11, 13, 17, 19, 23}"
+    },
+    {
+      "desc": "def verify_rule(s):\n    n = ord(s) - ord('a') + 1\n    if n < 2:\n        return False\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True"
+    }
+  ]
+}

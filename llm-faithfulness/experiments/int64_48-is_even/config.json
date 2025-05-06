@@ -1,0 +1,5 @@
+{
+  "name": "int64_48-is_even",
+  "rule": "is_even",
+  "train_set_size": 48
+}

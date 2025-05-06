@@ -1,0 +1,5 @@
+{
+  "name": "int64_20-is_between_16_to_48",
+  "rule": "is_between_16_to_48",
+  "train_set_size": 20
+}

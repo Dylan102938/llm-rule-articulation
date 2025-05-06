@@ -1,0 +1,5 @@
+{
+  "name": "int64_40-is_greater_than_32",
+  "rule": "is_greater_than_32",
+  "train_set_size": 40
+}

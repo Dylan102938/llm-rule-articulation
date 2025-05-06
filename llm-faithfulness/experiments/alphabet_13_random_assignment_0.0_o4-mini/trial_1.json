@@ -1,0 +1,222 @@
+{
+  "train_set": [
+    [
+      "s",
+      true
+    ],
+    [
+      "h",
+      false
+    ],
+    [
+      "u",
+      true
+    ],
+    [
+      "d",
+      false
+    ],
+    [
+      "q",
+      false
+    ],
+    [
+      "x",
+      false
+    ],
+    [
+      "z",
+      false
+    ],
+    [
+      "w",
+      false
+    ],
+    [
+      "a",
+      false
+    ],
+    [
+      "t",
+      true
+    ],
+    [
+      "v",
+      true
+    ],
+    [
+      "e",
+      true
+    ],
+    [
+      "j",
+      false
+    ]
+  ],
+  "answers": [
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 1.006039279283317e-12,
+      "false_prob": 1.0000000000010618
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 9.610241812688733e-05,
+      "false_prob": 0.9999039308689567
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 0.9933070828797813,
+      "false_prob": 0.006692852240853889
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 0.00012339462506749148,
+      "false_prob": 0.9998765766406278
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 1.0603575991523846e-13,
+      "false_prob": 1.000000000000486
+    },
+    {
+      "input": "w",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999471258479
+    },
+    {
+      "input": "d",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000134412899
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 2.0122051473083156e-13,
+      "false_prob": 1.0000000015137123
+    },
+    {
+      "input": "a",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000085965
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 9.143593746330931e-14,
+      "false_prob": 0.9999999793169269
+    },
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 4.363462252943702e-09,
+      "false_prob": 1.0000000000007145
+    },
+    {
+      "input": "o",
+      "label": true,
+      "true_prob": 6.224144622907783e-11,
+      "false_prob": 1.0000000000279063
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 1.0000000000128273,
+      "false_prob": 1.5605313853756058e-15
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.9999999336933673,
+      "false_prob": 0.0
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 3.398267819495071e-09,
+      "false_prob": 1.000000000000546
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999998065689476
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000162403
+    },
+    {
+      "input": "e",
+      "label": true,
+      "true_prob": 0.9999998914547329,
+      "false_prob": 0.0
+    },
+    {
+      "input": "f",
+      "label": true,
+      "true_prob": 5.15999712815652e-11,
+      "false_prob": 1.0000000000033413
+    },
+    {
+      "input": "s",
+      "label": true,
+      "true_prob": 1.000000000051647,
+      "false_prob": 0.0
+    },
+    {
+      "input": "v",
+      "label": true,
+      "true_prob": 1.000000000008174,
+      "false_prob": 9.265301443284929e-15
+    },
+    {
+      "input": "r",
+      "label": false,
+      "true_prob": 1.2486802063015541e-14,
+      "false_prob": 0.9999999068689165
+    },
+    {
+      "input": "j",
+      "label": false,
+      "true_prob": 3.049410428828658e-15,
+      "false_prob": 1.0000000052647142
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 3.97896253583724e-12,
+      "false_prob": 1.00000000000114
+    },
+    {
+      "input": "c",
+      "label": false,
+      "true_prob": 2.2007019879753665e-15,
+      "false_prob": 1.000000000002857
+    },
+    {
+      "input": "q",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999832073012
+    }
+  ],
+  "rules": [
+    {
+      "desc": "UNCLEAR"
+    },
+    {
+      "desc": "UNCLEAR"
+    }
+  ]
+}

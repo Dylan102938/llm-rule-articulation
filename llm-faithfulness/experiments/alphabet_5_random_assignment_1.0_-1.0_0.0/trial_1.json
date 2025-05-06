@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "e",
+      true
+    ],
+    [
+      "q",
+      false
+    ],
+    [
+      "x",
+      false
+    ],
+    [
+      "f",
+      false
+    ],
+    [
+      "a",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "o",
+      "label": true,
+      "true_prob": 0.9984987745469631,
+      "false_prob": 0.0015011819743870356
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 2.042047133955069e-14,
+      "false_prob": 1.0000000029949205
+    },
+    {
+      "input": "z",
+      "label": true,
+      "true_prob": 1.748234128271057e-13,
+      "false_prob": 1.000000002646641
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 8.340358565590937e-13,
+      "false_prob": 1.0000000003582645
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 1.4975964973626142e-16,
+      "false_prob": 1.0000000000018776
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.000000032297213
+    },
+    {
+      "input": "r",
+      "label": false,
+      "true_prob": 3.1608814543136926e-10,
+      "false_prob": 1.0000000000123328
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 6.768443275367166e-12,
+      "false_prob": 1.0000000000158098
+    },
+    {
+      "input": "k",
+      "label": true,
+      "true_prob": 2.8823507934443873e-13,
+      "false_prob": 1.0000000000010236
+    },
+    {
+      "input": "t",
+      "label": false,
+      "true_prob": 7.922281933770003e-08,
+      "false_prob": 0.9999998491602893
+    },
+    {
+      "input": "g",
+      "label": true,
+      "true_prob": 1.8795288165390832e-12,
+      "false_prob": 1.000000000017915
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 1.0000000000000346,
+      "false_prob": 9.862862046580453e-15
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 0.017986212980344467,
+      "false_prob": 0.9820137406601637
+    },
+    {
+      "input": "q",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999426224015
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 1.0000000000000964,
+      "false_prob": 1.0815941557285693e-11
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.00033535003966231027,
+      "false_prob": 0.9996646049785288
+    },
+    {
+      "input": "j",
+      "label": false,
+      "true_prob": 6.914400106940203e-13,
+      "false_prob": 1.0000000000012434
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999837364837
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 0.32082114619933744,
+      "false_prob": 0.6791788382866626
+    },
+    {
+      "input": "p",
+      "label": false,
+      "true_prob": 1.2256067444099483e-11,
+      "false_prob": 1.0000000000075755
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 0.005220126292690071,
+      "false_prob": 0.9947798792620278
+    },
+    {
+      "input": "m",
+      "label": false,
+      "true_prob": 1.2461418243204427e-15,
+      "false_prob": 0.9999999471251957
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 1.0000000000276503,
+      "false_prob": 0.0
+    },
+    {
+      "input": "n",
+      "label": true,
+      "true_prob": 2.5946094982764667e-11,
+      "false_prob": 1.0000000000024984
+    },
+    {
+      "input": "c",
+      "label": false,
+      "true_prob": 1.4449802461991825e-07,
+      "false_prob": 0.9999998064255403
+    },
+    {
+      "input": "e",
+      "label": true,
+      "true_prob": 0.9999998732856629,
+      "false_prob": 0.0
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['a', 'e']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['a', 'e']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['a', 'e']"
+    }
+  ]
+}

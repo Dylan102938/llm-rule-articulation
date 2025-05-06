@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "m",
+      false
+    ],
+    [
+      "j",
+      true
+    ],
+    [
+      "q",
+      true
+    ],
+    [
+      "b",
+      false
+    ],
+    [
+      "r",
+      false
+    ]
+  ],
+  "answers": [
+    {
+      "input": "z",
+      "label": true,
+      "true_prob": 0.8807970526768374,
+      "false_prob": 0.11920292283550843
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 0.1757550250758178,
+      "false_prob": 0.8242447709510863
+    },
+    {
+      "input": "u",
+      "label": false,
+      "true_prob": 0.4378201936685216,
+      "false_prob": 0.5621760432885738
+    },
+    {
+      "input": "i",
+      "label": true,
+      "true_prob": 0.7057831490990504,
+      "false_prob": 0.2942156170864104
+    },
+    {
+      "input": "g",
+      "label": true,
+      "true_prob": 0.0005527785385092633,
+      "false_prob": 0.999447139859167
+    },
+    {
+      "input": "f",
+      "label": true,
+      "true_prob": 0.7539964838107921,
+      "false_prob": 0.2460034338130392
+    },
+    {
+      "input": "t",
+      "label": false,
+      "true_prob": 0.0953493952008381,
+      "false_prob": 0.9046500166637855
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 0.999997067821302,
+      "false_prob": 2.902312105056987e-06
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 0.2689413332955029,
+      "false_prob": 0.7310584384511405
+    },
+    {
+      "input": "a",
+      "label": false,
+      "true_prob": 2.089569018608632e-11,
+      "false_prob": 0.9999999793331603
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 3.850741922767617e-09,
+      "false_prob": 1.000000000006706
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 0.9989676756904244,
+      "false_prob": 0.0010322312248080335
+    },
+    {
+      "input": "m",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000049891
+    },
+    {
+      "input": "r",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999425751522
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 1.8037290366086034e-13,
+      "false_prob": 1.000000000231968
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 0.18242543797633928,
+      "false_prob": 0.8175743767783098
+    },
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 0.9626730053810058,
+      "false_prob": 0.03732688364796305
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.9999934207545003,
+      "false_prob": 6.524221642320621e-06
+    },
+    {
+      "input": "d",
+      "label": false,
+      "true_prob": 2.7535687796947383e-05,
+      "false_prob": 0.9999723933342322
+    },
+    {
+      "input": "o",
+      "label": true,
+      "true_prob": 1.147876852587815e-05,
+      "false_prob": 0.9999884868689816
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 1.0000000000029767,
+      "false_prob": 1.0603575991523846e-13
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 0.00970847619883228,
+      "false_prob": 0.9902912931736716
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 0.07585808828163867,
+      "false_prob": 0.9241413716759506
+    },
+    {
+      "input": "c",
+      "label": false,
+      "true_prob": 1.6918979226151304e-10,
+      "false_prob": 1.0000000000015528
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 6.305116760146989e-16,
+      "false_prob": 1.0000000000007785
+    },
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 1.0000000130931979,
+      "false_prob": 0.0
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['j', 'q']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['j', 'q']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['j', 'q']"
+    }
+  ]
+}

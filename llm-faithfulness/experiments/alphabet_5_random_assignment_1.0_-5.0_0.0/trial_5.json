@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "d",
+      false
+    ],
+    [
+      "j",
+      true
+    ],
+    [
+      "x",
+      false
+    ],
+    [
+      "o",
+      false
+    ],
+    [
+      "u",
+      false
+    ]
+  ],
+  "answers": [
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 0.07585818598109484,
+      "false_prob": 0.9241417466803403
+    },
+    {
+      "input": "i",
+      "label": true,
+      "true_prob": 0.999999983206662,
+      "false_prob": 4.98301622991366e-16
+    },
+    {
+      "input": "q",
+      "label": false,
+      "true_prob": 0.14804714550199918,
+      "false_prob": 0.8519528059785112
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 4.8473687062702556e-11,
+      "false_prob": 1.0000000000018234
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000049472
+    },
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999068696237
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 1.522997974471263e-08,
+      "false_prob": 1.0000000000002685
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 4.363462252943702e-09,
+      "false_prob": 1.0000000000006306
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 2.1444938030560538e-05,
+      "false_prob": 0.9999784713305538
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 0.0009110511418907993,
+      "false_prob": 0.9990889297541116
+    },
+    {
+      "input": "c",
+      "label": false,
+      "true_prob": 1.7603429545652396e-06,
+      "false_prob": 0.9999981381468348
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.9999832380917681,
+      "false_prob": 1.670141418329934e-05
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 1.8553913626159784e-07,
+      "false_prob": 0.9999996872232783
+    },
+    {
+      "input": "p",
+      "label": false,
+      "true_prob": 4.0063702308654875e-05,
+      "false_prob": 0.9999599531461952
+    },
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 1.0000000118613181,
+      "false_prob": 3.743520185837789e-15
+    },
+    {
+      "input": "u",
+      "label": false,
+      "true_prob": 7.863359204994493e-15,
+      "false_prob": 1.0000000143146686
+    },
+    {
+      "input": "k",
+      "label": true,
+      "true_prob": 0.9999996873797465,
+      "false_prob": 2.382369667501818e-07
+    },
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 3.66839616443934e-07,
+      "false_prob": 0.9999996454278614
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.4687897589548987,
+      "false_prob": 0.5312094768620006
+    },
+    {
+      "input": "a",
+      "label": false,
+      "true_prob": 1.493094676197164e-10,
+      "false_prob": 1.0000000000008038
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 1.026187963170189e-10,
+      "false_prob": 1.0000000000008895
+    },
+    {
+      "input": "g",
+      "label": true,
+      "true_prob": 0.9999973073523492,
+      "false_prob": 2.662406540224744e-06
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 0.798186265706064,
+      "false_prob": 0.20181348264553353
+    },
+    {
+      "input": "n",
+      "label": false,
+      "true_prob": 3.398267819495071e-09,
+      "false_prob": 1.0000000000007858
+    },
+    {
+      "input": "v",
+      "label": false,
+      "true_prob": 4.658886145103398e-15,
+      "false_prob": 1.000000000001726
+    },
+    {
+      "input": "d",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999781712247
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s == 'j'"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s == 'j'"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s == 'j'"
+    }
+  ]
+}

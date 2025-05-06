@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "t",
+      true
+    ],
+    [
+      "w",
+      false
+    ],
+    [
+      "a",
+      true
+    ],
+    [
+      "h",
+      false
+    ],
+    [
+      "q",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "y",
+      "label": false,
+      "true_prob": 0.00015843624480356398,
+      "false_prob": 0.999841541253159
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 0.9999999837325256,
+      "false_prob": 0.0
+    },
+    {
+      "input": "e",
+      "label": true,
+      "true_prob": 0.5926663299951278,
+      "false_prob": 0.40733351605350704
+    },
+    {
+      "input": "o",
+      "label": true,
+      "true_prob": 0.1480471951710638,
+      "false_prob": 0.8519527747337236
+    },
+    {
+      "input": "x",
+      "label": true,
+      "true_prob": 0.0001584362426432965,
+      "false_prob": 0.9998415351627801
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.9999995518002585,
+      "false_prob": 4.131376415744471e-07
+    },
+    {
+      "input": "b",
+      "label": true,
+      "true_prob": 0.9996200199673408,
+      "false_prob": 0.00037998468073031336
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 1.0129987331455084e-05,
+      "false_prob": 0.9999897934235408
+    },
+    {
+      "input": "p",
+      "label": true,
+      "true_prob": 0.970687708513628,
+      "false_prob": 0.029312241188846188
+    },
+    {
+      "input": "t",
+      "label": true,
+      "true_prob": 0.9999999832070914,
+      "false_prob": 5.0828147376729274e-14
+    },
+    {
+      "input": "d",
+      "label": false,
+      "true_prob": 0.26894135829379445,
+      "false_prob": 0.7310585914714053
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 2.9989608248573072e-09,
+      "false_prob": 1.0000000000001572
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.962673060796524,
+      "false_prob": 0.03732688970841425
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 0.0013250223844997128,
+      "false_prob": 0.9986749250279595
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 0.9890129493924132,
+      "false_prob": 0.010986947072876216
+    },
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 7.433680672352188e-12,
+      "false_prob": 1.0000000000003972
+    },
+    {
+      "input": "n",
+      "label": true,
+      "true_prob": 0.9997964844919461,
+      "false_prob": 0.00020342704444184737
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 0.9999999781708325
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 0.9999723939358939,
+      "false_prob": 2.7535688330709556e-05
+    },
+    {
+      "input": "k",
+      "label": true,
+      "true_prob": 4.363462252943702e-09,
+      "false_prob": 1.0000000000050748
+    },
+    {
+      "input": "w",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000057994
+    },
+    {
+      "input": "m",
+      "label": false,
+      "true_prob": 5.115198381599887e-13,
+      "false_prob": 0.9999999837347817
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 1.0000000000178404,
+      "false_prob": 8.980238086273391e-15
+    },
+    {
+      "input": "v",
+      "label": true,
+      "true_prob": 1.2256067444099483e-11,
+      "false_prob": 1.000000000000066
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 1.0815941557285693e-11,
+      "false_prob": 1.0000000000024787
+    },
+    {
+      "input": "j",
+      "label": false,
+      "true_prob": 0.32263052601162806,
+      "false_prob": 0.677369440312161
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['a', 'q', 't']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in {'a', 'q', 't'}"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['a', 'q', 't']"
+    }
+  ]
+}

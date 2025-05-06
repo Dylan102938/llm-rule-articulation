@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "scratch"
+version = "0.1.0"
+description = ""
+authors = ["Dylan Feng <dylan@sonnetai.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.75.0"
+dotenv = "^0.9.9"
+datasets = "^3.5.0"
+pydantic = "^2.11.3"
+scikit-learn = "^1.6.1"
+matplotlib = "^3.10.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

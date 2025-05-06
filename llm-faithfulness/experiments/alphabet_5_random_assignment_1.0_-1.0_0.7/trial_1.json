@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "y",
+      true
+    ],
+    [
+      "q",
+      true
+    ],
+    [
+      "u",
+      false
+    ],
+    [
+      "n",
+      true
+    ],
+    [
+      "p",
+      false
+    ]
+  ],
+  "answers": [
+    {
+      "input": "o",
+      "label": false,
+      "true_prob": 0.9820138302626866,
+      "false_prob": 0.017986216486087964
+    },
+    {
+      "input": "x",
+      "label": true,
+      "true_prob": 0.9999956750709201,
+      "false_prob": 4.307079270899617e-06
+    },
+    {
+      "input": "j",
+      "label": false,
+      "true_prob": 0.05340331050227696,
+      "false_prob": 0.9465963684070865
+    },
+    {
+      "input": "i",
+      "label": true,
+      "true_prob": 6.47594599989589e-07,
+      "false_prob": 0.9999993296647761
+    },
+    {
+      "input": "t",
+      "label": false,
+      "true_prob": 0.9999970648502908,
+      "false_prob": 2.902312105056987e-06
+    },
+    {
+      "input": "n",
+      "label": true,
+      "true_prob": 0.9999999068733051,
+      "false_prob": 3.6213611838234155e-15
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.9999978991604561,
+      "false_prob": 1.994729895832688e-06
+    },
+    {
+      "input": "u",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000004220178
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 0.3208213013233781,
+      "false_prob": 0.6791787211652667
+    },
+    {
+      "input": "b",
+      "label": true,
+      "true_prob": 0.37606243430754116,
+      "false_prob": 0.6239374280311826
+    },
+    {
+      "input": "v",
+      "label": true,
+      "true_prob": 0.5312087168041686,
+      "false_prob": 0.4687906297845107
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.9999998066754665,
+      "false_prob": 1.4449802461092448e-07
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 0.9999996872901548,
+      "false_prob": 2.382369667501818e-07
+    },
+    {
+      "input": "q",
+      "label": true,
+      "true_prob": 1.0000000420793032,
+      "false_prob": 2.870620755633999e-13
+    },
+    {
+      "input": "f",
+      "label": false,
+      "true_prob": 0.4687898925681459,
+      "false_prob": 0.5312091377304072
+    },
+    {
+      "input": "y",
+      "label": true,
+      "true_prob": 1.0000000000008886,
+      "false_prob": 1.0277338255280365e-13
+    },
+    {
+      "input": "d",
+      "label": true,
+      "true_prob": 0.9980732718366454,
+      "false_prob": 0.0019267344884590176
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 0.9994409785824211,
+      "false_prob": 0.0005590302991639291
+    },
+    {
+      "input": "k",
+      "label": true,
+      "true_prob": 0.20181291845601443,
+      "false_prob": 0.7981867630717748
+    },
+    {
+      "input": "g",
+      "label": true,
+      "true_prob": 0.4687892885584956,
+      "false_prob": 0.5312088134618371
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 1.000000000006313,
+      "false_prob": 1.6918979226151304e-10
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 0.4378235186210856,
+      "false_prob": 0.5621765335889984
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 7.88926463665814e-06,
+      "false_prob": 0.9999920589653385
+    },
+    {
+      "input": "s",
+      "label": false,
+      "true_prob": 0.9999951577955193,
+      "false_prob": 4.78509457496562e-06
+    },
+    {
+      "input": "p",
+      "label": false,
+      "true_prob": 4.111452592548034e-15,
+      "false_prob": 1.000000000002025
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.9999394241363654,
+      "false_prob": 6.059256867987142e-05
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in \"yqnp\" and s != \"u\" and s != \"p\" and s != \"u\" and s != \"u\" and s != \"p\" and s != \"u\" and s != \"p\" and s != \"u\" and s != \"p\"\n\n# Correction made: The answer above is a mistaken rule, since \"p\" is False but \"q\" and \"y\" and \"n\" are True, and \"u\" and \"p\" are False.\n# Let's try to deduce the correct rule:\n\n# Given:\n# y -> True\n# q -> True\n# n -> True\n# u -> False\n# p -> False\n\n# All are lowercase.\n# It might be based on the position in the alphabet: \n# y(25) True, q(17) True, n(14) True, u(21) False, p(16) False\n\n# Let's check for odd/even, but no, y is 25 (True), q is 17 (True), n is 14 (True), u is 21 (False), p is 16 (False)\n# Last letter of word? No.\n\n# Let's check another possible pattern: Does the letter have a \"descender\" or stem etc.? But n/q/y do, but u and p also.\n# Let's check if the letter is not in \"up\" (since only \"u\" and \"p\" are labelled as False).\n\n# But we have too few examples to know generality for all 26 letters.\n\n# Therefore, proper output is:\nUNCLEAR"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['y', 'q', 'n']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['y', 'q', 'n']"
+    }
+  ]
+}

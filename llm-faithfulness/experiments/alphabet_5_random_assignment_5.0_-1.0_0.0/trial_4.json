@@ -1,0 +1,193 @@
+{
+  "train_set": [
+    [
+      "h",
+      false
+    ],
+    [
+      "s",
+      true
+    ],
+    [
+      "m",
+      true
+    ],
+    [
+      "g",
+      false
+    ],
+    [
+      "o",
+      true
+    ]
+  ],
+  "answers": [
+    {
+      "input": "f",
+      "label": true,
+      "true_prob": 1.2539221950995622e-15,
+      "false_prob": 1.0000000000009066
+    },
+    {
+      "input": "l",
+      "label": false,
+      "true_prob": 0.9999999472117242,
+      "false_prob": 1.0637424939094933e-12
+    },
+    {
+      "input": "c",
+      "label": true,
+      "true_prob": 1.6918979226151304e-10,
+      "false_prob": 1.0000000000014775
+    },
+    {
+      "input": "i",
+      "label": false,
+      "true_prob": 1.0000000000005393,
+      "false_prob": 1.0815941557285693e-11
+    },
+    {
+      "input": "e",
+      "label": false,
+      "true_prob": 4.752193062771153e-13,
+      "false_prob": 1.0000000000009586
+    },
+    {
+      "input": "x",
+      "label": false,
+      "true_prob": 0.9967590613083812,
+      "false_prob": 0.003240922103369087
+    },
+    {
+      "input": "a",
+      "label": true,
+      "true_prob": 1.2751905914873347e-07,
+      "false_prob": 0.9999998063897987
+    },
+    {
+      "input": "o",
+      "label": true,
+      "true_prob": 1.000000000102713,
+      "false_prob": 0.0
+    },
+    {
+      "input": "z",
+      "label": false,
+      "true_prob": 0.5621764850686701,
+      "false_prob": 0.4378234971416165
+    },
+    {
+      "input": "u",
+      "label": true,
+      "true_prob": 0.9989678155432883,
+      "false_prob": 0.0010322309613517721
+    },
+    {
+      "input": "m",
+      "label": true,
+      "true_prob": 1.000000000017838,
+      "false_prob": 1.2539221950995622e-15
+    },
+    {
+      "input": "d",
+      "label": false,
+      "true_prob": 2.707717986972444e-13,
+      "false_prob": 1.0000000000051166
+    },
+    {
+      "input": "k",
+      "label": false,
+      "true_prob": 0.006692851725579545,
+      "false_prob": 0.9933070725787584
+    },
+    {
+      "input": "y",
+      "label": true,
+      "true_prob": 0.9999999426100087,
+      "false_prob": 2.9072381720554755e-08
+    },
+    {
+      "input": "q",
+      "label": false,
+      "true_prob": 0.06754667817555224,
+      "false_prob": 0.9324532334263819
+    },
+    {
+      "input": "b",
+      "label": false,
+      "true_prob": 0.6224590705906741,
+      "false_prob": 0.3775408658699379
+    },
+    {
+      "input": "g",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000051474
+    },
+    {
+      "input": "v",
+      "label": true,
+      "true_prob": 0.9999999832067026,
+      "false_prob": 1.1248587444615334e-12
+    },
+    {
+      "input": "j",
+      "label": true,
+      "true_prob": 5.602796437537268e-09,
+      "false_prob": 1.0000000000304714
+    },
+    {
+      "input": "p",
+      "label": false,
+      "true_prob": 1.0000000000004756,
+      "false_prob": 1.5275899568992458e-14
+    },
+    {
+      "input": "w",
+      "label": true,
+      "true_prob": 0.9859362903253431,
+      "false_prob": 0.014063629235371394
+    },
+    {
+      "input": "r",
+      "label": true,
+      "true_prob": 0.9999794895116209,
+      "false_prob": 2.0495934692084137e-05
+    },
+    {
+      "input": "t",
+      "label": false,
+      "true_prob": 0.9579121182662337,
+      "false_prob": 0.042087755089187065
+    },
+    {
+      "input": "n",
+      "label": true,
+      "true_prob": 1.0000000000204061,
+      "false_prob": 1.9555681087850496e-08
+    },
+    {
+      "input": "h",
+      "label": false,
+      "true_prob": 0.0,
+      "false_prob": 1.0000000000122182
+    },
+    {
+      "input": "s",
+      "label": true,
+      "true_prob": 0.9999999076613375,
+      "false_prob": 0.0
+    }
+  ],
+  "rules": [
+    {
+      "desc": "def verify_rule(s):\n    return s in ['s', 'm', 'o']"
+    },
+    {
+      "desc": "def verify_rule(s):\n    return s in ['s', 'm', 'o']"
+    },
+    {
+      "desc": "def verify_rule(ch):\n    return ch in \"msou\""
+    }
+  ]
+}
