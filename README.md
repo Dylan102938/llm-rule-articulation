@@ -46,9 +46,9 @@ When computing $\phi$, we use the standard accuracy function $acc(f, r') = Pr[f(
 
 **Results:** The following are the results of my experiments for each of the following rules described above. The blue lines illustrate the performance of the implicit rule $r'$ generated from the likelihood distribution $P(y \space | \space x)$ on the test dataset and the red line indicates the estimated $\phi$ values for articulated rules. We additionally also show a fraction in red that indicates the estimate of $Q(r')$, or the fraction of articulated rules that are completely faithful to the model's implicit rule $r'$.
 
-| ![[<img src="imgs/Pasted image 20250505045353.png" />]] | ![[imgs/Pasted image 20250505045359.png]] |
+| <img src="imgs/Pasted image 20250505045353.png" /> | <img src="imgs/Pasted image 20250505045359.png" /> |
 | ------------------------------------ | ------------------------------------ |
-| ![[Pasted image 20250505045404.png]] | ![[Pasted image 20250505045409.png]] |
+| <img src="imgs/Pasted image 20250505045404.png" /> | <img src="imgs/Pasted image 20250505045409.png" /> |
 
 We see that across many rules (all except `is_even`), and especially on smaller values of $||D_{train}||$ the model demonstrates a fair amount of unfaithfulness. Though $\phi$ values are often close to 1, indicating that many articulated rules are likely very similar to $r'$,  the model rarely outputs rules that seem consistent with the model's true classification behavior (as seen by the 95% CI bars not reaching 1 and several instances where $Q(r') = 0$). Additionally, on the `is_between_16_to_48` experiment, we observe a special case where the model illustrates unfaithfulness, since it refuses to articulate a faithful rule despite evidence that shows it has an understanding of the gold rule $r(x)$ and uses $r(x)$ at certain values of $||D_{train}||$ to do classifications. This is evidenced by:
 1. 100% classification accuracies when $||D_{train}|| \geq 32$, which by definition implies that the model understands $r(x)$ w.r.t $D$.
@@ -82,7 +82,7 @@ In other words, we measure counterfactual consistency as $\phi$ over a set of ca
 
 **Results:** The results indicate that GPT-4.1 is capable of performing well at rule-based classification tasks, but struggles to faithfully articulate the actual rule it uses for classifications. Specifically, there are instances where the model achieves high classification accuracy and articulates the exact rule used to generate the data, but counterfactual investigations show that it is probably not plausible that the model uses this rule for classification, at least consistently on all i.d. inputs.
 
-| ![[Pasted image 20250505232414.png]] |
+| <img src="imgs/Pasted image 20250505232414.png" /> |
 | ------------------------------------ |
 
 As seen in the figure, GPT-4.1 can get a very high classification accuracy and in-distribution (relative to the train set) faithfulness score ($\phi$ over the test set). In fact, almost every single rule articulated is exactly the same as the gold rule $r(x)$. The reason the model is not completely faithful in-distribution is due to the fact that GPT-4.1 occasionally misclassifies an example. I believe these misclassifications are due to noise from the fewer number of experimental trials, and can likely be rectified by running more trials per experiment.
@@ -128,14 +128,14 @@ We set up an experiment to investigate model faithfulness in this exact scenario
 
 | **Sliced By Train Set Size = 24**    |                                      |
 | ------------------------------------ | ------------------------------------ |
-| ![[Pasted image 20250505165623.png]] | ![[Pasted image 20250505165629.png]] |
-| ![[Pasted image 20250505165638.png]] |                                      |
+| <img src="imgs/Pasted image 20250505165623.png" /> | <img src="imgs/Pasted image 20250505165629.png" /> |
+| <img src="imgs/Pasted image 20250505165638.png" /> |                                      |
 
 | **Sliced by Refrain Penalty = -1.0** |                                      |
 | ------------------------------------ | ------------------------------------ |
-| ![[Pasted image 20250505170008.png]] | ![[Pasted image 20250505170021.png]] |
-| ![[Pasted image 20250505170027.png]] | ![[Pasted image 20250505170033.png]] |
-| ![[Pasted image 20250505170043.png]] |                                      |
+| <img src="imgs/Pasted image 20250505170008.png" /> | <img src="imgs/Pasted image 20250505170021.png" /> |
+| <img src="imgs/Pasted image 20250505170027.png" /> | <img src="imgs/Pasted image 20250505170033.png" /> |
+| <img src="imgs/Pasted image 20250505170043.png" /> |                                      |
 
 When observing the results, it's not surprising to see that the model acts more faithfully as the "refrain penalty" goes down, as seen in the figures for `train set size = 24`. This is reasonable as the `refrain penalty` is pretty much exactly aligned with our desired faithful behavior. I do want to note that this behavior doesn't seem to be consistent across all slices of training set size, but this is more likely because of the effects of noise and low diversity.
 
